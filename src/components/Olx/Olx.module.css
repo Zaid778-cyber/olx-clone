@@ -1,0 +1,129 @@
+
+body {
+  overflow-x: hidden;
+  background-color: #968c8c;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+
+.container {
+  margin: 0 auto;
+  padding: 0 10px;
+  max-width: 1200px; 
+  width: 100%;
+}
+
+
+.inputselect,
+.inputsearch {
+  height: 50px;
+  border-radius: 9px;
+  font-size: 1rem;
+  padding: 8px;
+  border: 1px solid #ccc;
+  margin: 5px;
+}
+
+
+.inputselect {
+  width: 100%;
+  max-width: 250px;
+}
+
+.inputsearch {
+  width: 100%;
+  max-width: 600px;
+}
+
+
+.inputbtn {
+  width: 130px;
+  height: 50px;
+  border: none;
+  background: #002f34;
+  font-size: 1rem;
+  color: white;
+  border-radius: 9px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.inputbtn:hover {
+  background: #014246;
+}
+
+
+.select {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap; 
+  margin: 10px 0;
+}
+
+.selectoption {
+  height: 45px;
+  min-width: 80px;
+  padding: 5px 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+
+.data {
+  margin: 10px;
+}
+
+
+.Mobiles {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 15px;
+}
+
+
+@media (max-width: 1024px) {
+  .inputsearch {
+    max-width: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .inputsearch {
+    max-width: 100%;
+  }
+
+  .inputselect {
+    max-width: 100%;
+  }
+
+  .select {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 480px) {
+  .inputbtn {
+    width: 100%;
+  }
+
+  .selectoption {
+    width: 100%;
+  }
+}
+
+.comp2{
+  display: flex;
+  margin-top: 100px;
+  flex-wrap: wrap; 
+  gap: 15px;
+  margin-bottom: 20px;
+}

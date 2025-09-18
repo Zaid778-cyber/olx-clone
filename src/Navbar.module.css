@@ -1,0 +1,139 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.navcontainer {
+  height: 9vh;
+  width: 100%;
+  background-color: #ebf1ff;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  
+
+  font-size: 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+
+a {
+  text-decoration: none;
+  color: rgb(10, 10, 10);
+  transition: all 0.3s ease;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+a:hover {
+  background: rgba(56, 56, 248, 0.1);
+}
+
+
+.isactive {
+  background-color: white;
+  font-size: 2rem;
+  color: rgb(56, 56, 248);
+  border-radius: 12px;
+  padding: 10px 15px;
+  font-weight: bold;
+  margin-left: 55px; 
+}
+
+
+.islogin {
+  background: white;
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  border-radius: 12px;
+  margin-left: auto;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+   
+}
+
+.islogin:hover {
+  background: rgb(56, 56, 248);
+  color: white;
+}
+
+
+.noneolx {
+  color: rgb(5, 61, 5);
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 55px;
+}
+
+/* Default Login Text (non-active) */
+.nonelogin {
+  margin-left: auto;
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+}
+
+
+@media (max-width: 768px) {
+  .navcontainer {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 15px;
+  }
+
+  a {
+    margin: 5px 0;
+    font-size: 1.2rem;
+  }
+
+  .isactive {
+    font-size: 1.5rem;
+    padding: 8px 12px;
+  }
+
+  .islogin {
+    margin: 10px 0 0;
+    align-self: flex-start;
+    font-size: 1rem;
+  }
+
+  .noneolx {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .navcontainer {
+    padding: 10px;
+  }
+
+  a {
+    font-size: 1rem;
+    padding: 6px 10px;
+  }
+
+  .isactive {
+    font-size: 1.2rem;
+    padding: 6px 10px;
+  }
+
+  .islogin {
+    font-size: 1rem;
+    padding: 8px 12px;
+  }
+
+  .noneolx {
+    font-size: 1.5rem;
+  }
+}

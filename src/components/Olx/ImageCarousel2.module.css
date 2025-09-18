@@ -1,0 +1,15 @@
+.imagecarousal2 {
+   width: 100%;      
+   max-width: 1200px; 
+   margin: 0 auto;    
+   height: auto;      
+   display: block;
+ }
+ 
+ 
+ @media (max-width: 768px) {
+   .imagecarousal {
+     max-width: 100%; 
+   }
+ }
+ 

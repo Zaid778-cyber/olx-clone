@@ -1,0 +1,37 @@
+.mobile {
+  height: auto;              
+  width: 100%;              
+  max-width: 190px;          
+  margin: 15px auto;        
+  text-align: center;
+  font-size: 1rem;        
+  padding: 5px;
+  box-sizing: border-box;
+         
+  border-radius: 8px;         
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  cursor: pointer;          
+}
+
+/* 🎨 Hover effect */
+.mobile:hover {
+  transform: scale(1.05);     
+  box-shadow: 0px 6px 15px rgba(168, 54, 54, 0.5); /* shadow */
+  
+}
+
+/* 🖥️ Tablets */
+@media (min-width: 768px) {
+  .mobile {
+    font-size: 2rem;
+    max-width: 220px;
+  }
+}
+
+/* 🖥️ Desktops */
+@media (min-width: 1024px) {
+  .mobile {
+    max-width: 250px;
+    font-size: 2.2rem;
+  }
+}
