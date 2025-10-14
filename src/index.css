@@ -1,6 +1,7 @@
-
-*{
+* {
   margin: 0px;
   padding: 0px;
-
+}
+#root {
+  font-family: "Poppins", "Segoe UI", Roboto, sans-serif;
 }

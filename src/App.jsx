@@ -6,7 +6,7 @@ import Olx from "./components/Olx/Olx";
 import Moters from "./components/Moters/Moters";
 import Property from "./components/Property/Porperty";
 import Login from "./Login";
-import Footer from "./components/footer/Footer"
+import Footer from "./components/footer/Footer";
 
 let router = createBrowserRouter([
   {
@@ -15,7 +15,7 @@ let router = createBrowserRouter([
       <>
         <Navbar />
         <Olx />
-        <Footer/>
+        <Footer />
       </>
     ),
   },
@@ -25,7 +25,7 @@ let router = createBrowserRouter([
       <>
         <Navbar />
         <Moters />
-         <Footer/>
+        <Footer />
       </>
     ),
   },
@@ -35,7 +35,7 @@ let router = createBrowserRouter([
       <>
         <Navbar />
         <Property />
-         <Footer/>
+        <Footer />
       </>
     ),
   },
@@ -45,7 +45,7 @@ let router = createBrowserRouter([
       <>
         <Navbar />
         <Login />
-         <Footer/>
+        <Footer />
       </>
     ),
   },

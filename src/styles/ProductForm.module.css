@@ -1,0 +1,135 @@
+/* ─────────────── Form Wrapper ─────────────── */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  background: var(--card);
+  padding: 1.25rem;
+  border-radius: 1rem;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ─────────────── Title ─────────────── */
+.form h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.4rem;
+}
+
+/* ─────────────── Inputs & Textarea ─────────────── */
+.form input,
+.form textarea {
+  width: 100%;
+  font-family: inherit;
+  font-size: 0.95rem;
+  padding: 0.75rem 0.9rem;
+  border-radius: 0.65rem;
+  border: 1px solid var(--border);
+  background: var(--input-bg);
+  color: var(--text);
+  outline: none;
+  transition: all 0.25s ease;
+  resize: none;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+  color: var(--muted);
+  opacity: 0.9;
+}
+
+.form input:focus,
+.form textarea:focus {
+  border-color: var(--primary);
+  background: var(--input-focus-bg);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+/* ─────────────── Button ─────────────── */
+.btn {
+  margin-top: 0.5rem;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 0.65rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.75rem;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+.btn:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.25);
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* ─────────────── Error Message ─────────────── */
+.err {
+  color: #ef4444;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-top: -0.4rem;
+}
+
+/* ─────────────── Theme Variables ─────────────── */
+:root {
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --primary: #3b82f6;
+  --input-bg: #f9fafb;
+  --input-focus-bg: #ffffff;
+}
+
+/* ─────────────── Dark Mode ─────────────── */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --card: #1e1e21;
+    --text: #f3f4f6;
+    --muted: #9ca3af;
+    --border: #2d2d32;
+    --primary: #3b82f6;
+    --input-bg: #2a2a2e;
+    --input-focus-bg: #1f1f23;
+  }
+
+  .form {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* ─────────────── Responsive ─────────────── */
+@media (max-width: 640px) {
+  .form {
+    padding: 1rem;
+  }
+
+  .btn {
+    padding: 0.7rem;
+    font-size: 0.9rem;
+  }
+}

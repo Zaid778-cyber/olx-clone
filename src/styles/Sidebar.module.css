@@ -1,0 +1,138 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+  min-height: 100vh;
+  background: var(--surface);
+  color: var(--text);
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 1.5rem 1rem;
+  box-shadow: 4px 0 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.brand {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: -0.5px;
+  color: var(--primary);
+  margin-bottom: 2rem;
+}
+
+/* Navigation links container */
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+/* Default nav button */
+.link {
+  all: unset;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.9rem 1rem;
+  border-radius: 0.75rem;
+  color: var(--text-secondary);
+  transition: all 0.25s ease;
+}
+
+.link:hover {
+  background: var(--hover);
+  color: var(--text);
+  transform: translateX(4px);
+}
+
+/* Active link */
+.active {
+  all: unset;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.9rem 1rem;
+  border-radius: 0.75rem;
+  background: var(--primary);
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+  transition: all 0.25s ease;
+}
+
+.active:hover {
+  transform: translateX(4px);
+  box-shadow: 0 6px 14px rgba(59, 130, 246, 0.35);
+}
+
+/* Footer text */
+.footer {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  opacity: 0.8;
+  margin-top: 2rem;
+  user-select: none;
+}
+
+/* Theme variables */
+:root {
+  --primary: #3b82f6;
+  --surface: #ffffff;
+  --text: #1f2937;
+  --text-secondary: #4b5563;
+  --text-muted: #9ca3af;
+  --hover: rgba(59, 130, 246, 0.08);
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: #3b82f6;
+    --surface: #18181b;
+    --text: #e5e7eb;
+    --text-secondary: #9ca3af;
+    --text-muted: #6b7280;
+    --hover: rgba(255, 255, 255, 0.08);
+  }
+
+  .sidebar {
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 4px 0 16px rgba(0, 0, 0, 0.25);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 220px;
+    padding: 1rem;
+  }
+
+  .brand {
+    font-size: 1.4rem;
+  }
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  .sidebar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 64px;
+    border-right: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: none;
+  }
+
+  .nav {
+    flex-direction: row;
+    gap: 1rem;
+    overflow-x: auto;
+  }
+
+  .footer {
+    display: none;
+  }
+}

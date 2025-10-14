@@ -17,17 +17,13 @@ function Navbar() {
         </NavLink>
         <NavLink
           to="/moters"
-          className={({ isActive }) =>
-            isActive ? styles.isactive :''
-          }
+          className={({ isActive }) => (isActive ? styles.isactive : "")}
         >
           Moters
         </NavLink>
         <NavLink
           to="/property"
-          className={({ isActive }) =>
-            isActive ? styles.isactive :''
-          }
+          className={({ isActive }) => (isActive ? styles.isactive : "")}
         >
           Property
         </NavLink>{" "}

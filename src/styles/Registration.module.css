@@ -1,0 +1,83 @@
+.container {
+   max-width: 400px;
+   margin: 60px auto;
+   padding: 30px;
+   background: #fff;
+   border-radius: 16px;
+   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+   font-family: 'Poppins', sans-serif;
+   animation: fadeIn 0.4s ease-in-out;
+ }
+ 
+ .title {
+   text-align: center;
+   margin-bottom: 25px;
+   color: #333;
+   font-weight: 600;
+ }
+ 
+ .form {
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+ }
+ 
+ .formGroup {
+   display: flex;
+   flex-direction: column;
+ }
+ 
+ .formGroup label {
+   font-size: 0.9rem;
+   margin-bottom: 5px;
+   color: #555;
+ }
+ 
+ .formGroup input,
+ .formGroup select {
+   padding: 10px;
+   border: 1px solid #ccc;
+   border-radius: 8px;
+   outline: none;
+   font-size: 0.95rem;
+   transition: border 0.2s ease;
+ }
+ 
+ .formGroup input:focus,
+ .formGroup select:focus {
+   border-color: #007bff;
+ }
+ 
+ .checkbox {
+   flex-direction: row;
+   align-items: center;
+   gap: 8px;
+ }
+ 
+ .button {
+   background: linear-gradient(90deg, #007bff, #00bfff);
+   color: white;
+   border: none;
+   padding: 10px 0;
+   border-radius: 8px;
+   font-size: 1rem;
+   cursor: pointer;
+   transition: 0.3s;
+ }
+ 
+ .button:hover {
+   background: linear-gradient(90deg, #0056b3, #0080ff);
+   transform: translateY(-1px);
+ }
+ 
+ .error {
+   color: red;
+   font-size: 0.85rem;
+   margin-top: 3px;
+ }
+ 
+ @keyframes fadeIn {
+   from { opacity: 0; transform: translateY(10px); }
+   to { opacity: 1; transform: translateY(0); }
+ }
+ 

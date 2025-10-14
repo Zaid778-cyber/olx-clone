@@ -1,0 +1,99 @@
+/* Wrapper */
+.wrap {
+  background: var(--surface);
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  overflow-x: auto;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Table base */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  color: var(--text);
+  min-width: 600px;
+}
+
+/* Table headers */
+.table th {
+  text-align: left;
+  padding: 0.85rem 1rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: var(--table-header);
+  border-bottom: 2px solid var(--border);
+  white-space: nowrap;
+}
+
+/* Table cells */
+.table td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+  transition: background 0.2s ease;
+}
+
+/* Hover effect */
+.table tr:hover td {
+  background: var(--hover);
+}
+
+/* Zebra rows */
+.table tr:nth-child(even) td {
+  background: var(--row-alt);
+}
+
+/* Rounded corners on top headers */
+.table thead tr:first-child th:first-child {
+  border-top-left-radius: 0.5rem;
+}
+.table thead tr:first-child th:last-child {
+  border-top-right-radius: 0.5rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .table {
+    font-size: 0.9rem;
+    min-width: 100%;
+  }
+
+  .table th,
+  .table td {
+    padding: 0.75rem 0.8rem;
+  }
+}
+
+/* Theme variables */
+:root {
+  --surface: #ffffff;
+  --card: #f9fafb;
+  --text: #1f2937;
+  --text-secondary: #4b5563;
+  --border: #e5e7eb;
+  --hover: rgba(59, 130, 246, 0.05);
+  --row-alt: #f9fafb;
+  --table-header: #f3f4f6;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --surface: #18181b;
+    --card: #1f1f23;
+    --text: #e5e7eb;
+    --text-secondary: #9ca3af;
+    --border: #27272a;
+    --hover: rgba(255, 255, 255, 0.05);
+    --row-alt: #1f1f23;
+    --table-header: #202025;
+  }
+
+  .wrap {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+  }
+}
