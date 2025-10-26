@@ -15,10 +15,8 @@ export default function Registration() {
 
   const onSubmit = (data) => {
     try {
-      // 1. Get existing users from localStorage
       const existing = JSON.parse(localStorage.getItem("users_v1")) || [];
 
-      // 2. Check for duplicates
       const emailExists = existing.some((u) => u.email === data.email);
       if (emailExists) {
         toast.error("User with this email already exists ⚠️", {
@@ -28,24 +26,20 @@ export default function Registration() {
         return;
       }
 
-      // 3. Add new user
       const newUser = {
         ...data,
         id: Date.now(),
       };
       const updated = [...existing, newUser];
 
-      // 4. Save to localStorage
       localStorage.setItem("users_v1", JSON.stringify(updated));
 
-      // 5. Show success toast
       toast.success("🎉 Registration Successful!", {
         position: "top-center",
         autoClose: 5000,
         theme: "colored",
       });
 
-      // 6. Clear form
       reset();
     } catch (err) {
       console.error(err);

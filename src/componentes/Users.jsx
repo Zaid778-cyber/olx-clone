@@ -4,13 +4,11 @@ import styles from "../styles/Users.module.css";
 export default function Users() {
   const [users, setUsers] = useState([]);
 
-  // ✅ Load users initially
   useEffect(() => {
     const stored = JSON.parse(localStorage.getItem("users_v1")) || [];
     setUsers(stored);
   }, []);
 
-  // ✅ Listen for changes in localStorage (e.g., when registration happens)
   useEffect(() => {
     const handleStorageChange = () => {
       const updated = JSON.parse(localStorage.getItem("users_v1")) || [];
@@ -26,13 +24,11 @@ export default function Users() {
     };
   }, []);
 
-  // 🗑️ Delete user handler
   const deleteUser = (email) => {
     const updated = users.filter((u) => u.email !== email);
     setUsers(updated);
     localStorage.setItem("users_v1", JSON.stringify(updated));
 
-    // Update other tabs/components too
     window.dispatchEvent(new Event("usersUpdated"));
   };
 

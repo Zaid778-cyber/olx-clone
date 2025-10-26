@@ -15,8 +15,14 @@ export default function Products() {
     localStorage.setItem("products_v1", JSON.stringify(products));
   }, [products]);
 
-  const addProduct = (p) =>
-    setProducts((prev) => [...prev, { ...p, id: Date.now() }]);
+  const addProduct = (p) => {
+    setProducts((prev) => {
+      const newList = [...prev, { ...p, id: Date.now() }];
+      localStorage.setItem("products_v1", JSON.stringify(newList));
+      window.dispatchEvent(new Event("productsUpdated")); // ✅ update OLX in real-time
+      return newList;
+    });
+  };
 
   const deleteProduct = (id) =>
     setProducts((prev) => prev.filter((x) => x.id !== id));
@@ -26,7 +32,6 @@ export default function Products() {
       prev.map((p) => (p.id === id ? { ...p, ...data } : p))
     );
 
-  // 🖼️ When clicking an image, open it in new tab
   const openImageInNewTab = (url) => {
     if (url) {
       window.open(url, "_blank");

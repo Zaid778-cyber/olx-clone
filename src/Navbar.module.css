@@ -7,7 +7,7 @@
 .navcontainer {
   height: 9vh;
   width: 100%;
-  background-color: #ebf1ff;
+  background-color :#0f172a;;
 
   display: flex;
   justify-content: space-between;
@@ -22,7 +22,7 @@
 
 a {
   text-decoration: none;
-  color: rgb(10, 10, 10);
+  color: rgb(255, 211, 211);
   transition: all 0.3s ease;
   padding: 8px 12px;
   border-radius: 8px;
@@ -43,7 +43,7 @@ a:hover {
 }
 
 .islogin {
-  background: white;
+  background: rgb(206, 8, 8);
   font-size: 1.2rem;
   padding: 10px 15px;
   border-radius: 12px;
@@ -55,7 +55,7 @@ a:hover {
 
 .islogin:hover {
   background: rgb(56, 56, 248);
-  color: white;
+  color: rgb(7, 7, 7);
 }
 
 .noneolx {
