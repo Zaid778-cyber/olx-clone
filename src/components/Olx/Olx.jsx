@@ -8,7 +8,6 @@ import Electronic from "./Electronic";
 import Bikes from "./Bikes";
 import Tractor from "./Tractor";
 import Servies from "./Services.jsx";
-import Kides from "./kides.jsx";
 import Bookes from './Bookes.jsx';
 import Fashion from "./Fashion.jsx";
 import ImageCarousel2 from "./ImageCarousel2.jsx";
@@ -85,7 +84,7 @@ function Olx() {
 
       <div className={styles.comp2}>
         <Servies />
-        <Kides />
+        
         <Bookes />
         <Fashion />
       </div>
