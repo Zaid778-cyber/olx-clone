@@ -1,40 +1,33 @@
 .kides {
-   height: auto;              
-   width: 100%;               
-   max-width: 190px;          
-   margin: 15px auto;         
-   text-align: center;
-   font-size: 1.5rem;         
-   padding: 10px;
-   box-sizing: border-box;
-             
-   border-radius: 8px;         
-   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-   cursor: pointer;            
- }
- 
- .kides{
-   margin-bottom: 15px;
- }
- 
- .kides:hover {
-   transform: scale(1.05);     
-   box-shadow: 0px 6px 15px rgba(167, 34, 34, 0.5); 
-         
- }
- 
+  height: auto;
+  width: 100%;
+  max-width: 190px;
+  margin: 15px auto;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
 
- @media (min-width: 768px) {
-   .kides{
-     font-size: 2rem;         
-     max-width: 220px;
-   }
- }
- 
- @media (min-width: 1024px) {
-   .kides {
-     max-width: 250px;
-     font-size: 2.2rem;
-   }
- }
- 
+.kides:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 15px rgba(167, 34, 34, 0.5);
+}
+
+@media (min-width: 768px) {
+  .kides {
+    font-size: 2rem;
+    max-width: 220px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .kides {
+    max-width: 250px;
+    font-size: 2.2rem;
+  }
+}

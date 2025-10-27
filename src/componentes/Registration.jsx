@@ -13,37 +13,34 @@ export default function Registration() {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     try {
-      const existing = JSON.parse(localStorage.getItem("users_v1")) || [];
+      const response = await fetch("http://localhost:5000/api/users/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
 
-      const emailExists = existing.some((u) => u.email === data.email);
-      if (emailExists) {
-        toast.error("User with this email already exists ⚠️", {
+      const result = await response.json();
+
+      if (!response.ok) {
+        toast.error(result.message || "Registration failed ⚠️", {
           position: "top-center",
           theme: "colored",
         });
         return;
       }
 
-      const newUser = {
-        ...data,
-        id: Date.now(),
-      };
-      const updated = [...existing, newUser];
-
-      localStorage.setItem("users_v1", JSON.stringify(updated));
-
       toast.success("🎉 Registration Successful!", {
         position: "top-center",
-        autoClose: 5000,
+        autoClose: 4000,
         theme: "colored",
       });
 
       reset();
     } catch (err) {
       console.error(err);
-      toast.error("Something went wrong!", {
+      toast.error("Server error. Try again later.", {
         position: "top-center",
         theme: "colored",
       });
